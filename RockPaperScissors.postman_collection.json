@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "09b21fd5-a2be-4b50-b44c-dd084d02d556",
+		"name": "RockPaperScissors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19569453"
+	},
+	"item": [
+		{
+			"name": "Get Game Session",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Game Session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sessionId\": \"1\",\r\n    \"player1Choice\": \"scissors\",\r\n    \"player2Choice\": \"paper\",\r\n    \"result\": \"player2 Wins\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/game/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Sessions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game/getAllSessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"getAllSessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Total Rounds Played",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game/getTotalRoundsPlayed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"getTotalRoundsPlayed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Overall Game Scores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game/getOverallGameScores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game",
+						"getOverallGameScores"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
