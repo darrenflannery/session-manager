@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sessionmanager.dto.GameDto;
 import com.sessionmanager.dto.ResponseDto;
 import com.sessionmanager.entity.Game;
+import com.sessionmanager.entity.OverallGame;
 import com.sessionmanager.service.GameService;
 
 @RestController
@@ -40,6 +41,16 @@ public class GameController {
 	@RequestMapping("/getAllSessions")
 	public HashMap<String, ArrayList<Game>> getAllSessions(){
 		return service.getAllSessions();
+	}
+	
+	@RequestMapping("/getOverallGameScores")
+	public OverallGame getOverallGameScores(){
+		return service.getOverallGameScores();
+	}
+	
+	@RequestMapping("/getTotalRoundsPlayed")
+	public int getTotalRoundsPlayed(){
+		return service.getTotalRoundsPlayed();
 	}
 
 }
